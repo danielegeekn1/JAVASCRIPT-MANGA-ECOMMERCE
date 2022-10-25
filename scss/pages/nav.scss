@@ -51,8 +51,10 @@
   //dropdown menus style
   #main-drop-downs {
     @include flex(flex, center, flex-end);
-    @include size(5px, 40%);
     @include space(5px, 5vw, 1.8rem);
+    width: 100%;
+    padding: 10px 10vw;
+    list-style: none;
     border: 2px solid green;
     //style each dropdown menu
     .drop-down {
@@ -60,6 +62,9 @@
       color: $font-col;
       text-decoration: none;
       list-style: none;
+      font-size: 140;
+      font-weight: bold;
+      text-transform: capitalize;
       &:hover {
         color: $hover-col;
       }
@@ -67,6 +72,13 @@
     //hide the drop-down menus in order to be diplayed when clicked
     .hidden-display {
       display: none;
+      & li {
+        font-size: 140;
+        font-weight: bold;
+        text-transform: capitalize;
+        text-decoration: none;
+        list-style: none;
+      }
     }
   }
 }
