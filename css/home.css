@@ -62,6 +62,9 @@
   list-style: none;
   border: 2px solid green;
 }
+.navbar #main-drop-downs ul {
+  position: relative;
+}
 .navbar #main-drop-downs .drop-down {
   flex: 1;
   color: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
@@ -76,6 +79,7 @@
 }
 .navbar #main-drop-downs .hidden-display {
   display: none;
+  position: absolute;
 }
 .navbar #main-drop-downs .hidden-display li {
   font-size: 140;

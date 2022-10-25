@@ -57,6 +57,9 @@
     list-style: none;
     border: 2px solid green;
     //style each dropdown menu
+    ul {
+      position: relative;
+    }
     .drop-down {
       flex: 1;
       color: $font-col;
@@ -72,6 +75,7 @@
     //hide the drop-down menus in order to be diplayed when clicked
     .hidden-display {
       display: none;
+      position: absolute;
       & li {
         font-size: 140;
         font-weight: bold;
