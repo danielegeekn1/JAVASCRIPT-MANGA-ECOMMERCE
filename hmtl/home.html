@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--css links-->
-
+    <link rel="stylesheet" href="../css/home.css" />
     <!--js scripts-->
     <script src="../js/home.js" defer></script>
     <title>Main Page</title>
@@ -13,7 +13,35 @@
   <body>
     <!--start of the navbar-->
     <nav class="navbar">
-      <nav></nav>
+      <nav>
+        <!--main logo-->
+        <img class="logo" src="../images/logo.jpg" alt="main logo" />
+        <!--input and button-->
+        <div class="input-search-space">
+          <input type="text" class="search-box" placeholder="search a manga" />
+          <button class="search-btn">search</button>
+        </div>
+      </nav>
+      <!--dropdown menu -->
+      <section id="main-drop-downs">
+        <ul>
+          <li class="drop-down">best sellers</li>
+          <div class="hidden-display">
+            <li>comics</li>
+            <li>games</li>
+            <li>gadget</li>
+          </div>
+        </ul>
+        <ul>
+          <li class="drop-down">last releases</li>
+          <div class="hidden-display">
+            <li>comics</li>
+            <li>games</li>
+            <li>gadget</li>
+          </div>
+        </ul>
+      </section>
     </nav>
+    <!--end of header -->
   </body>
 </html>

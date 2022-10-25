@@ -1,0 +1,72 @@
+@import "../abstracts/variables/variables.scss";
+@import "../abstracts/mixin/mixin.scss";
+
+.navbar {
+  //code to fix it in the top of the page
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $background-col;
+  z-index: 9;
+
+  //nav code to order the search box and the images
+  @include flex(flex, space-between, center);
+  flex-flow: column;
+
+  nav {
+    //center the elements in the nav
+    @include flex(flex, space-between, center);
+    @include size(150px, 100%);
+    @include space(25px, 19px, 1.5rem);
+    background-color: $background-col;
+    border: 3px solid black;
+    //style the logo
+    .logo {
+      @include size(110px, 150px);
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+    //center the input and the button
+    .input-search-space {
+      @include flex(flex, center, center);
+      @include space(5px, 5px, 1rem);
+      border: 2px solid green;
+      //style the input and the button
+      //input style
+      .search-box {
+        @include size(35px, 200px);
+        border-radius: 5px;
+      }
+      //button style
+      .search-btn {
+        @include size(30px, 45px);
+        border-radius: 5px;
+        &:hover {
+          color: $hover-col;
+        }
+      }
+    }
+  }
+  //dropdown menus style
+  #main-drop-downs {
+    @include flex(flex, center, flex-end);
+    @include size(5px, 40%);
+    @include space(5px, 5vw, 1.8rem);
+    border: 2px solid green;
+    //style each dropdown menu
+    .drop-down {
+      flex: 1;
+      color: $font-col;
+      text-decoration: none;
+      list-style: none;
+      &:hover {
+        color: $hover-col;
+      }
+    }
+    //hide the drop-down menus in order to be diplayed when clicked
+    .hidden-display {
+      display: none;
+    }
+  }
+}

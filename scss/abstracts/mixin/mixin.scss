@@ -13,3 +13,8 @@
   padding: $padding;
   gap: $gap;
 }
+@mixin font($font-style, $font-size, $font-weight) {
+  font-style: $font-style;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
