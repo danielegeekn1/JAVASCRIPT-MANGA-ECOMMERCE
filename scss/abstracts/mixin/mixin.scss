@@ -1,0 +1,15 @@
+@mixin flex($display, $justify, $align) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin size($height, $width) {
+  height: $height;
+  width: $width;
+}
+@mixin space($margin, $padding, $gap) {
+  margin: $margin;
+  padding: $padding;
+  gap: $gap;
+}
