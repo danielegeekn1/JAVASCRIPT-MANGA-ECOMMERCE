@@ -16,15 +16,40 @@ mangaCollections.forEach((item, i) => {
     item.scrollLeft += containerWidth;
   });
 });
+//code for the cart section
+
+addToCartBtn = document.querySelectorAll(".add-to-cart");
+if (document.readyState == "loading") {
+  document.addEventListener("DOMContentLoaded", ready);
+} else {
+  ready();
+}
+
+function ready() {
+  var removeCartItemButtons = document.getElementsByClassName("btn-danger");
+  for (var i = 0; i < removeCartItemButtons.length; i++) {
+    var button = removeCartItemButtons[i];
+    button.addEventListener("click", removeCartItem);
+  }
+
+  var quantityInputs = document.getElementsByClassName("cart-quantity-input");
+  for (var i = 0; i < quantityInputs.length; i++) {
+    var input = quantityInputs[i];
+    input.addEventListener("change", quantityChanged);
+  }
+
+  for (let i = 0; i < addToCartBtn.length; i++) {
+    clickBtn = addToCartBtn[i];
+    console.log(clickBtn);
+    clickBtn.addEventListener("click", addToCartClick);
+  }
+
+  document
+    .getElementsByClassName("btn-purchase")[0]
+    .addEventListener("click", purchaseClicked);
+}
 
 //code to add product in the cart
-addToCartBtn = document.querySelectorAll(".add-to-cart");
-
-for (let i = 0; i < addToCartBtn.length; i++) {
-  clickBtn = addToCartBtn[i];
-  console.log(clickBtn);
-  clickBtn.addEventListener("click", addToCartClick);
-}
 
 function addToCartClick(e) {
   let target = e.target;
@@ -103,6 +128,15 @@ function quantityChanged(event) {
   var input = event.target;
   if (isNaN(input.value) || input.value <= 0) {
     input.value = 1;
+  }
+  updateCartTotal();
+}
+//code to set the purchase in our cart
+function purchaseClicked() {
+  alert("Thank you for your purchase");
+  var cartItems = document.getElementsByClassName("cart-items")[0];
+  while (cartItems.hasChildNodes()) {
+    cartItems.removeChild(cartItems.firstChild);
   }
   updateCartTotal();
 }
