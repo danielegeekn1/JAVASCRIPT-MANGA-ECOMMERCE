@@ -1,5 +1,4 @@
 .navbar {
-  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -98,6 +97,7 @@
   align-items: center;
   flex-flow: column;
   border: 3px solid blue;
+  z-index: 10;
   background-image: url(/my-ecommerce/images/logo.jpg) no-repeat center center/cover;
 }
 .best-release .best-release-sec {

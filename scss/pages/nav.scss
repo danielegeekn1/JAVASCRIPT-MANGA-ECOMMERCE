@@ -3,13 +3,12 @@
 
 .navbar {
   //code to fix it in the top of the page
-  position: sticky;
+  //position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   background-color: $background-col;
   z-index: 9;
-
   //nav code to order the search box and the images
   @include flex(flex, space-between, center);
   flex-flow: column;
@@ -92,6 +91,7 @@
   @include flex(flex, center, center);
   flex-flow: column;
   border: 3px solid blue;
+  z-index: 10;
   background-image: url(/my-ecommerce/images/logo.jpg) no-repeat center
     center/cover;
   .best-release-sec {
