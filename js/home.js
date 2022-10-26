@@ -34,7 +34,7 @@ function addToCartClick(e) {
   let actualPrice = mainShop.getElementsByClassName("actual-price").innerText;
   let imageSrc = mainShop.getElementsByClassName("img-cover")[0].src;
   addItemToCart(title, actualPrice, imageSrc);
-  //updateCartTotal();
+  updateCartTotal();
 }
 function addItemToCart(title, actualPrice, imageSrc) {
   let cartRow = document.createElement("div");
@@ -72,6 +72,7 @@ function addItemToCart(title, actualPrice, imageSrc) {
     .getElementsByClassName("cart-quantity-input")[0]
     .addEventListener("change", quantityChanged);
 }
+
 //code to update cart Total
 function updateCartTotal() {
   var cartItemContainer = document.getElementsByClassName("cart-items")[0];
@@ -90,4 +91,18 @@ function updateCartTotal() {
   total = Math.round(total * 100) / 100;
   document.getElementsByClassName("cart-total-price")[0].innerText =
     "$" + total;
+}
+//function to remove our item we added in the cart that we declared in our event listener that we called in addItemToCart function
+function removeCartItem(event) {
+  var buttonClicked = event.target;
+  buttonClicked.parentElement.parentElement.remove();
+  updateCartTotal();
+}
+//function to change our item we added in the cart that we declared in our event listener that we called in addItemToCart function
+function quantityChanged(event) {
+  var input = event.target;
+  if (isNaN(input.value) || input.value <= 0) {
+    input.value = 1;
+  }
+  updateCartTotal();
 }
