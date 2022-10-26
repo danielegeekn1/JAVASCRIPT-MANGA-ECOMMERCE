@@ -236,3 +236,9 @@
     }
   }
 }
+//code to style cart section
+.container {
+  @include flex(flex, center, center);
+  @include size(500px, 900px);
+  background-color: orangered;
+}

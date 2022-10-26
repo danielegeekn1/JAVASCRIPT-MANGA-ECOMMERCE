@@ -2,6 +2,7 @@
 const mangaCollections = document.querySelectorAll(".manga-collection");
 const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
 const preBtn = [...document.querySelectorAll(".pre-btn")];
+const cartSection = document.querySelector(".cart-section");
 
 mangaCollections.forEach((item, i) => {
   //code to get the correct dimension of each manga collection
@@ -30,39 +31,53 @@ function addToCartClick(e) {
   console.log(target);
   let mainShop = target.parentElement;
   let title = mainShop.getElementsByClassName("manga-release")[0].innerText;
-  let actualPrice =
-    mainShop.getElementsByClassName("actual-price")[0].innerText;
+  let actualPrice = mainShop.getElementsByClassName("actual-price").innerText;
   let imageSrc = mainShop.getElementsByClassName("img-cover")[0].src;
   addItemToCart(title, actualPrice, imageSrc);
+  //updateCartTotal();
 }
 function addItemToCart(title, actualPrice, imageSrc) {
   let cartRow = document.createElement("div");
-  mangaInfo = document.querySelectorAll(".manga-release");
-  cartSection = document.querySelector(".cart-section");
-  /*for (let i = 0; i < mangaInfo.length; i++) {
-    if (mangaInfo[i].innerText == title) {
+  cartRow.classList.add("cart-row");
+  var cartItems = document.getElementsByClassName("cart-items")[0];
+  console.log(cartItems, "CART ITEMSSS");
+  var cartItemNames = cartItems.getElementsByClassName("cart-item-title");
+  for (var i = 0; i < cartItemNames.length; i++) {
+    if (cartItemNames[i].innerText == title) {
       alert("This item is already added to the cart");
       return;
     }
-  }*/
-
+  }
   let cartRowContents = `
-  <section class="manga-container">
-          <div class="manga-image">
-            <span class="discount-item">discount - 50% off</span>
-            <img
-              class="img-cover"
-              src="${imageSrc}"
-              alt="last demon slayer release"
-            />
-          </div>
-          <div class="manga-info">
-            <h3 class="manga-release">${title}</h3>
-            <span class="actual-price">${actualPrice}</span>
-          </div>
-          <button class="remove-from-cart">remove from cart</button>
-        </section>
+  <div class="cart-item cart-column">
+  <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+  <span class="cart-item-title">${title}</span>
+</div>
+<span class="cart-price cart-column">${actualPrice}</span>
+<div class="cart-quantity cart-column">
+  <input class="cart-quantity-input" type="number" value="1">
+  <button class="btn btn-danger" type="button">REMOVE</button>
+</div>
   `;
   cartRow.innerHTML = cartRowContents;
-  cartSection.append(cartRow);
+  cartItems.append(cartRow);
 }
+//code to update cart Total
+/*function updateCartTotal() {
+  var cartItemContainer = document.getElementsByClassName("manga-container")[0];
+  var cartRows = cartItemContainer.getElementsByClassName("manga-info");
+  var total = 0;
+  for (var i = 0; i < cartRows.length; i++) {
+    var cartRow = cartRows[i];
+    console.log(cartRow);
+    var priceElement = cartRow.getElementsByClassName("actual-price")[0];
+    var quantityElement = cartRow.getElementsByClassName("cart-quantity")[0];
+    var price = parseFloat(priceElement.innerText.replace("€", ""));
+    var quantity = quantityElement.value;
+    total = total + price * quantity;
+  }
+  total = Math.round(total * 100) / 100;
+  document.getElementsByClassName("cart-total-price")[0].innerText =
+    "$" + total;
+}
+*/
