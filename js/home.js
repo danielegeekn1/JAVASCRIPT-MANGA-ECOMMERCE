@@ -26,15 +26,15 @@ if (document.readyState == "loading") {
 }
 
 function ready() {
-  var removeCartItemButtons = document.getElementsByClassName("btn-danger");
-  for (var i = 0; i < removeCartItemButtons.length; i++) {
-    var button = removeCartItemButtons[i];
+  let removeCartItemButtons = document.getElementsByClassName("btn-danger");
+  for (let i = 0; i < removeCartItemButtons.length; i++) {
+    let button = removeCartItemButtons[i];
     button.addEventListener("click", removeCartItem);
   }
 
   var quantityInputs = document.getElementsByClassName("cart-quantity-input");
-  for (var i = 0; i < quantityInputs.length; i++) {
-    var input = quantityInputs[i];
+  for (let i = 0; i < quantityInputs.length; i++) {
+    let input = quantityInputs[i];
     input.addEventListener("change", quantityChanged);
   }
 
@@ -64,11 +64,11 @@ function addToCartClick(e) {
 function addItemToCart(title, actualPrice, imageSrc) {
   let cartRow = document.createElement("div");
   cartRow.classList.add("cart-row");
-  var cartItems = document.getElementsByClassName("cart-items")[0];
+  let cartItems = document.getElementsByClassName("cart-items")[0];
   console.log(cartItems, "CART ITEMSSS");
-  var cartItemNames = cartItems.getElementsByClassName("cart-item-title");
+  let cartItemNames = cartItems.getElementsByClassName("cart-item-title");
   //code to check if an item has already been added, in this case that won't be possibile and the alert will fire
-  for (var i = 0; i < cartItemNames.length; i++) {
+  for (let i = 0; i < cartItemNames.length; i++) {
     if (cartItemNames[i].innerText == title) {
       alert("This item is already added to the cart");
       return;
@@ -100,17 +100,17 @@ function addItemToCart(title, actualPrice, imageSrc) {
 
 //code to update cart Total
 function updateCartTotal() {
-  var cartItemContainer = document.getElementsByClassName("cart-items")[0];
-  var cartRows = cartItemContainer.getElementsByClassName("cart-row");
-  var total = 0;
-  for (var i = 0; i < cartRows.length; i++) {
-    var cartRow = cartRows[i];
-    var priceElement = cartRow.getElementsByClassName("cart-price")[0];
-    var quantityElement = cartRow.getElementsByClassName(
+  let cartItemContainer = document.getElementsByClassName("cart-items")[0];
+  let cartRows = cartItemContainer.getElementsByClassName("cart-row");
+  let total = 0;
+  for (let i = 0; i < cartRows.length; i++) {
+    let cartRow = cartRows[i];
+    let priceElement = cartRow.getElementsByClassName("cart-price")[0];
+    let quantityElement = cartRow.getElementsByClassName(
       "cart-quantity-input"
     )[0];
-    var price = parseFloat(priceElement.innerText.replace("€", ""));
-    var quantity = quantityElement.value;
+    let price = parseFloat(priceElement.innerText.replace("€", ""));
+    let quantity = quantityElement.value;
     total = total + price * quantity;
   }
   total = Math.round(total * 100) / 100;
@@ -119,13 +119,13 @@ function updateCartTotal() {
 }
 //function to remove our item we added in the cart that we declared in our event listener that we called in addItemToCart function
 function removeCartItem(event) {
-  var buttonClicked = event.target;
+  let buttonClicked = event.target;
   buttonClicked.parentElement.parentElement.remove();
   updateCartTotal();
 }
 //function to change our item we added in the cart that we declared in our event listener that we called in addItemToCart function
 function quantityChanged(event) {
-  var input = event.target;
+  let input = event.target;
   if (isNaN(input.value) || input.value <= 0) {
     input.value = 1;
   }
@@ -134,7 +134,7 @@ function quantityChanged(event) {
 //code to set the purchase in our cart
 function purchaseClicked() {
   alert("Thank you for your purchase");
-  var cartItems = document.getElementsByClassName("cart-items")[0];
+  let cartItems = document.getElementsByClassName("cart-items")[0];
   while (cartItems.hasChildNodes()) {
     cartItems.removeChild(cartItems.firstChild);
   }
