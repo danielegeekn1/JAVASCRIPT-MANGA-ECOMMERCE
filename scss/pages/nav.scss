@@ -86,19 +86,18 @@
     }
   }
 }
-
 //code to style best-release section
 .best-release {
   @include size(600px, 100%);
   @include flex(flex, center, center);
   flex-flow: column;
+  border: 3px solid blue;
   background-image: url(/my-ecommerce/images/logo.jpg) no-repeat center
     center/cover;
   .best-release-sec {
     @include flex(flex, center, center);
     flex-flow: column;
     @include size(300px, 100%);
-    border: 3px solid red;
     .logo {
       //style to center the logo with margin and display
       display: block;

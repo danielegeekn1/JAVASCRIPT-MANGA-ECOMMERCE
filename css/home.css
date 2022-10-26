@@ -97,6 +97,7 @@
   justify-content: center;
   align-items: center;
   flex-flow: column;
+  border: 3px solid blue;
   background-image: url(/my-ecommerce/images/logo.jpg) no-repeat center center/cover;
 }
 .best-release .best-release-sec {
@@ -106,7 +107,6 @@
   flex-flow: column;
   height: 300px;
   width: 100%;
-  border: 3px solid red;
 }
 .best-release .best-release-sec .logo {
   display: block;
