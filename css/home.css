@@ -60,6 +60,7 @@
   width: 100%;
   padding: 10px 10vw;
   list-style: none;
+  z-index: 9;
   border: 2px solid green;
 }
 .navbar #main-drop-downs ul {
@@ -87,6 +88,133 @@
   text-transform: capitalize;
   text-decoration: none;
   list-style: none;
+}
+
+.products {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 1100px;
+  width: 100%;
+  border: 3px solid green;
+  padding: 20px 0;
+  position: sticky;
+}
+.products .product-category {
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+.products .pre-btn,
+.products .nxt-btn {
+  border: none;
+  height: 100%;
+  width: 10vw;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+.products .pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+.products .nxt-btn {
+  right: 0;
+}
+.products .pre-btn img,
+.products .nxt-btn img {
+  opacity: 0.2;
+}
+.products .pre-btn:hover img,
+.products .nxt-btn:hover img {
+  opacity: 1;
+}
+.products .manga-collection {
+  padding: 0 10vw;
+  position: sticky;
+  z-index: 9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  border: 3px solid violet;
+  height: 900px;
+  width: 100%;
+  margin: 8px;
+  padding: 5px;
+  gap: 1.5rem;
+}
+.products .manga-collection .manga-collection::-webkit-scrollbar {
+  display: none;
+}
+.products .manga-collection .manga-container {
+  flex: 0 0 auto;
+  height: 850px;
+  width: 250px;
+  margin-right: 40px;
+}
+.products .manga-collection .manga-container .manga-image {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+}
+.products .manga-collection .manga-container .manga-image .discount-item {
+  position: absolute;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  color: #ff7d7d;
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+}
+.products .manga-collection .manga-container .manga-image .img-cover {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+.products .manga-collection .manga-container .manga-info {
+  height: 350px;
+  width: 100%;
+  padding-top: 10px;
+}
+.products .manga-collection .manga-container .manga-info .manga-release {
+  font-style: sans-serif;
+  font-size: 200;
+  font-weight: bold;
+}
+.products .manga-collection .manga-container .manga-info .manga-des {
+  height: 240px;
+  width: 100%;
+  line-height: 20px;
+  overflow: hidden;
+  opacity: 0.5;
+  text-transform: capitalize;
+  margin: 5px 0;
+}
+.products .manga-collection .manga-container .manga-info .price {
+  font-weight: 900;
+  font-size: 20px;
+}
+.products .manga-collection .manga-container .manga-info .actual-price {
+  margin-left: 20px;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+.products .manga-collection .manga-container .add-to-cart {
+  height: 50px;
+  width: 120px;
+  background-color: linear-gradient(red, yellow);
+  border-radius: 15px;
 }
 
 * {
