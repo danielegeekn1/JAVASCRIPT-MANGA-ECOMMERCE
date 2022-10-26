@@ -90,6 +90,39 @@
   list-style: none;
 }
 
+.best-release {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-image: url(/my-ecommerce/images/logo.jpg) no-repeat center center/cover;
+}
+.best-release .best-release-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  height: 300px;
+  width: 100%;
+  border: 3px solid red;
+}
+.best-release .best-release-sec .logo {
+  display: block;
+  margin: auto;
+  height: 200px;
+}
+.best-release .best-release-sec .sub-heading {
+  margin-top: 10px;
+  text-align: center;
+  color: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  text-transform: capitalize;
+  font-style: sans-serif;
+  font-size: 35px;
+  font-weight: 300;
+}
+
 .products {
   position: relative;
   overflow-x: hidden;

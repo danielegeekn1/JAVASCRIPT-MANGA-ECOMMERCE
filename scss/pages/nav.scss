@@ -87,6 +87,33 @@
   }
 }
 
+//code to style best-release section
+.best-release {
+  @include size(600px, 100%);
+  @include flex(flex, center, center);
+  flex-flow: column;
+  background-image: url(/my-ecommerce/images/logo.jpg) no-repeat center
+    center/cover;
+  .best-release-sec {
+    @include flex(flex, center, center);
+    flex-flow: column;
+    @include size(300px, 100%);
+    border: 3px solid red;
+    .logo {
+      //style to center the logo with margin and display
+      display: block;
+      margin: auto;
+      height: 200px;
+    }
+    .sub-heading {
+      margin-top: 10px;
+      text-align: center;
+      color: $font-col;
+      text-transform: capitalize;
+      @include font(sans-serif, 35px, 300);
+    }
+  }
+}
 //code to style the products section
 .products {
   position: relative;
