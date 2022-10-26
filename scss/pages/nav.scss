@@ -52,10 +52,9 @@
   #main-drop-downs {
     @include flex(flex, center, flex-end);
     @include space(5px, 5vw, 1.8rem);
-    width: 100%;
+    @include size(100px, 100%);
     padding: 10px 10vw;
     list-style: none;
-    z-index: 9;
     border: 2px solid green;
     //style each dropdown menu
     ul {
@@ -102,13 +101,13 @@
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 40px;
-    text-transform: capitalize;
+    text-transform: capitalize, uppercase;
   }
   //code to style the arrows buttons
   .pre-btn,
   .nxt-btn {
     border: none;
-    @include size(100%, 10vw);
+    @include size(100%, 5vw);
     position: absolute;
     top: 0;
     @include flex(flex, center, center);
@@ -138,8 +137,8 @@
   //manga collection style
   .manga-collection {
     padding: 0 10vw;
-    position: sticky;
-    z-index: 9;
+    position: absolute;
+    z-index: 7;
     @include flex(flex, space-around, center);
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -175,7 +174,7 @@
           object-fit: cover;
         }
       }
-      //code to syle description and price
+      //code to style manga description and price
       .manga-info {
         @include size(350px, 100%);
         padding-top: 10px;
@@ -202,6 +201,7 @@
           text-decoration: line-through;
         }
       }
+      //code to syle add-to-cart button, this button will have the functionality to add products to the cart
       .add-to-cart {
         @include size(50px, 120px);
         background-color: $background-col;

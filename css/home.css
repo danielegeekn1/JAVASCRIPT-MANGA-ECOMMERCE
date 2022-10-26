@@ -57,10 +57,10 @@
   margin: 5px;
   padding: 5vw;
   gap: 1.8rem;
+  height: 100px;
   width: 100%;
   padding: 10px 10vw;
   list-style: none;
-  z-index: 9;
   border: 2px solid green;
 }
 .navbar #main-drop-downs ul {
@@ -105,13 +105,13 @@
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 40px;
-  text-transform: capitalize;
+  text-transform: capitalize, uppercase;
 }
 .products .pre-btn,
 .products .nxt-btn {
   border: none;
   height: 100%;
-  width: 10vw;
+  width: 5vw;
   position: absolute;
   top: 0;
   display: flex;
@@ -138,8 +138,8 @@
 }
 .products .manga-collection {
   padding: 0 10vw;
-  position: sticky;
-  z-index: 9;
+  position: absolute;
+  z-index: 7;
   display: flex;
   justify-content: space-around;
   align-items: center;
