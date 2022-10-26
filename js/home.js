@@ -42,12 +42,14 @@ function addItemToCart(title, actualPrice, imageSrc) {
   var cartItems = document.getElementsByClassName("cart-items")[0];
   console.log(cartItems, "CART ITEMSSS");
   var cartItemNames = cartItems.getElementsByClassName("cart-item-title");
+  //code to check if an item has already been added, in this case that won't be possibile and the alert will fire
   for (var i = 0; i < cartItemNames.length; i++) {
     if (cartItemNames[i].innerText == title) {
       alert("This item is already added to the cart");
       return;
     }
   }
+  //code to add dynamically the item we added in the cart
   let cartRowContents = `
   <div class="cart-item cart-column">
   <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
@@ -61,17 +63,26 @@ function addItemToCart(title, actualPrice, imageSrc) {
   `;
   cartRow.innerHTML = cartRowContents;
   cartItems.append(cartRow);
+  //code to change or remove the item we added in the cart
+  //then we'll have to declare our functions we defined within our event listeners
+  cartRow
+    .getElementsByClassName("btn-danger")[0]
+    .addEventListener("click", removeCartItem);
+  cartRow
+    .getElementsByClassName("cart-quantity-input")[0]
+    .addEventListener("change", quantityChanged);
 }
 //code to update cart Total
-/*function updateCartTotal() {
-  var cartItemContainer = document.getElementsByClassName("manga-container")[0];
-  var cartRows = cartItemContainer.getElementsByClassName("manga-info");
+function updateCartTotal() {
+  var cartItemContainer = document.getElementsByClassName("cart-items")[0];
+  var cartRows = cartItemContainer.getElementsByClassName("cart-row");
   var total = 0;
   for (var i = 0; i < cartRows.length; i++) {
     var cartRow = cartRows[i];
-    console.log(cartRow);
-    var priceElement = cartRow.getElementsByClassName("actual-price")[0];
-    var quantityElement = cartRow.getElementsByClassName("cart-quantity")[0];
+    var priceElement = cartRow.getElementsByClassName("cart-price")[0];
+    var quantityElement = cartRow.getElementsByClassName(
+      "cart-quantity-input"
+    )[0];
     var price = parseFloat(priceElement.innerText.replace("€", ""));
     var quantity = quantityElement.value;
     total = total + price * quantity;
@@ -80,4 +91,3 @@ function addItemToCart(title, actualPrice, imageSrc) {
   document.getElementsByClassName("cart-total-price")[0].innerText =
     "$" + total;
 }
-*/
