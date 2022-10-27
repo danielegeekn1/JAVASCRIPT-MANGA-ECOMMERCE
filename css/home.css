@@ -98,7 +98,7 @@
   flex-flow: column;
   border: 3px solid blue;
   z-index: 10;
-  background-image: url(/my-ecommerce/images/logo.jpg) no-repeat center center/cover;
+  background: url(/my-ecommerce/images/demon-slayer-wp.jpeg) no-repeat center center/cover;
 }
 .best-release .best-release-sec {
   display: flex;
@@ -112,6 +112,7 @@
   display: block;
   margin: auto;
   height: 200px;
+  border-radius: 50%;
 }
 .best-release .best-release-sec .sub-heading {
   margin-top: 10px;
@@ -120,7 +121,7 @@
   text-transform: capitalize;
   font-style: sans-serif;
   font-size: 35px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .products {
@@ -144,7 +145,7 @@
 .products .nxt-btn {
   border: none;
   height: 100%;
-  width: 5vw;
+  width: 1.5vw;
   position: absolute;
   top: 0;
   display: flex;
@@ -163,7 +164,7 @@
 }
 .products .pre-btn img,
 .products .nxt-btn img {
-  opacity: 0.2;
+  opacity: 0.1;
 }
 .products .pre-btn:hover img,
 .products .nxt-btn:hover img {
@@ -181,7 +182,7 @@
   border: 3px solid violet;
   height: 900px;
   width: 100%;
-  margin: 8px;
+  margin: 15px;
   padding: 5px;
   gap: 1.5rem;
 }
@@ -192,7 +193,7 @@
   flex: 0 0 auto;
   height: 850px;
   width: 250px;
-  margin-right: 40px;
+  margin: 0;
 }
 .products .manga-collection .manga-container .manga-image {
   position: relative;
@@ -242,12 +243,48 @@
   margin-left: 20px;
   opacity: 0.5;
   text-decoration: line-through;
+  font-weight: bold;
 }
 .products .manga-collection .manga-container .add-to-cart {
   height: 50px;
   width: 120px;
   background-color: linear-gradient(red, yellow);
   border-radius: 15px;
+}
+
+.last-release {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  border: 3px solid blue;
+  z-index: 10;
+  background: url(/my-ecommerce/images/made-in-abyss-wp.jpeg) no-repeat center center/cover;
+}
+.last-release .last-release-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  height: 300px;
+  width: 100%;
+}
+.last-release .last-release-sec .last-logo {
+  display: block;
+  margin: auto;
+  height: 200px;
+  border-radius: 50%;
+}
+.last-release .last-release-sec .last-sub-heading {
+  margin-top: 10px;
+  text-align: center;
+  color: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  text-transform: capitalize;
+  font-style: sans-serif;
+  font-size: 35px;
+  font-weight: 400;
 }
 
 * {

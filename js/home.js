@@ -115,7 +115,7 @@ function updateCartTotal() {
   }
   total = Math.round(total * 100) / 100;
   document.getElementsByClassName("cart-total-price")[0].innerText =
-    "$" + total;
+    "€" + total;
 }
 //function to remove our item we added in the cart that we declared in our event listener that we called in addItemToCart function
 function removeCartItem(event) {

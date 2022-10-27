@@ -92,7 +92,7 @@
   flex-flow: column;
   border: 3px solid blue;
   z-index: 10;
-  background-image: url(/my-ecommerce/images/logo.jpg) no-repeat center
+  background: url(/my-ecommerce/images/demon-slayer-wp.jpeg) no-repeat center
     center/cover;
   .best-release-sec {
     @include flex(flex, center, center);
@@ -103,13 +103,14 @@
       display: block;
       margin: auto;
       height: 200px;
+      border-radius: 50%;
     }
     .sub-heading {
       margin-top: 10px;
       text-align: center;
       color: $font-col;
       text-transform: capitalize;
-      @include font(sans-serif, 35px, 300);
+      @include font(sans-serif, 35px, 400);
     }
   }
 }
@@ -133,7 +134,7 @@
   .pre-btn,
   .nxt-btn {
     border: none;
-    @include size(100%, 5vw);
+    @include size(100%, 1.5vw);
     position: absolute;
     top: 0;
     @include flex(flex, center, center);
@@ -154,7 +155,7 @@
   }
   .pre-btn img,
   .nxt-btn img {
-    opacity: 0.2;
+    opacity: 0.1;
   }
   .pre-btn:hover img,
   .nxt-btn:hover img {
@@ -170,7 +171,8 @@
     scroll-behavior: smooth;
     border: 3px solid violet;
     @include size(900px, 100%);
-    @include space(8px, 5px, 1.5rem);
+    @include space(15px, 5px, 1.5rem);
+
     .manga-collection::-webkit-scrollbar {
       display: none;
     }
@@ -178,7 +180,7 @@
     .manga-container {
       flex: 0 0 auto;
       @include size(850px, 250px);
-      margin-right: 40px;
+      margin: 0;
 
       //manga image
       .manga-image {
@@ -225,6 +227,7 @@
           margin-left: 20px;
           opacity: 0.5;
           text-decoration: line-through;
+          font-weight: bold;
         }
       }
       //code to syle add-to-cart button, this button will have the functionality to add products to the cart
@@ -236,9 +239,32 @@
     }
   }
 }
-//code to style cart section
-.container {
+//code to style best-release section
+.last-release {
+  @include size(600px, 100%);
   @include flex(flex, center, center);
-  @include size(500px, 900px);
-  background-color: orangered;
+  flex-flow: column;
+  border: 3px solid blue;
+  z-index: 10;
+  background: url(/my-ecommerce/images/made-in-abyss-wp.jpeg) no-repeat center
+    center/cover;
+  .last-release-sec {
+    @include flex(flex, center, center);
+    flex-flow: column;
+    @include size(300px, 100%);
+    .last-logo {
+      //style to center the logo with margin and display
+      display: block;
+      margin: auto;
+      height: 200px;
+      border-radius: 50%;
+    }
+    .last-sub-heading {
+      margin-top: 10px;
+      text-align: center;
+      color: $font-col;
+      text-transform: capitalize;
+      @include font(sans-serif, 35px, 400);
+    }
+  }
 }
