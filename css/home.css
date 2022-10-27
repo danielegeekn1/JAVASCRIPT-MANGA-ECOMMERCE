@@ -223,7 +223,6 @@
   width: 100%;
   padding-top: 10px;
   color: rgb(0, 0, 0);
-  font-weight: 600;
 }
 .products .manga-collection .manga-container .manga-info .manga-release {
   font-style: sans-serif;
@@ -237,6 +236,8 @@
   overflow: hidden;
   opacity: 0.5;
   margin: 5px 0;
+  font-weight: 600;
+  color: black;
 }
 .products .manga-collection .manga-container .manga-info .price {
   font-weight: 900;
@@ -292,6 +293,52 @@
 
 .products-second {
   background: url(/my-ecommerce/images/demon-3.jpeg) no-repeat center center/cover;
+}
+
+.content-section {
+  margin: 1em;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+.container .section-header {
+  font-family: "Metal Mania";
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+  font-size: 2.5em;
+}
+.container .cart-row {
+  display: flex;
+}
+.container .cart-row .cart-item {
+  width: 45%;
+}
+.container .cart-row .cart-price {
+  width: 20%;
+  font-size: 1.2em;
+  color: #333;
+}
+.container .cart-row .cart-quantity {
+  width: 35%;
+}
+.container .cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.container .cart-total .cart-total-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px;
+}
+.container .cart-total .cart-total-price {
+  color: #333;
+  font-size: 1.1em;
 }
 
 * {
