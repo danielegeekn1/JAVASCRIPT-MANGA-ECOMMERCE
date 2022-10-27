@@ -220,7 +220,7 @@
 }
 .products .manga-collection .manga-container .manga-info {
   height: 350px;
-  width: 100%;
+  width: 80%;
   padding-top: 10px;
   color: rgb(0, 0, 0);
 }
@@ -339,6 +339,11 @@
 .container .cart-total .cart-total-price {
   color: #333;
   font-size: 1.1em;
+}
+.container .btn-purchase {
+  display: block;
+  margin: 40px auto 80px auto;
+  font-size: 1.75em;
 }
 
 * {

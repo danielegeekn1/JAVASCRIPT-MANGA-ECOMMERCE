@@ -209,7 +209,7 @@
       }
       //code to style manga description and price
       .manga-info {
-        @include size(350px, 100%);
+        @include size(350px, 80%);
         padding-top: 10px;
         color: rgb(0, 0, 0);
         .manga-release {
@@ -323,5 +323,10 @@
       color: #333;
       font-size: 1.1em;
     }
+  }
+  .btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
   }
 }

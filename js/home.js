@@ -56,7 +56,8 @@ function addToCartClick(e) {
   console.log(target);
   let mainShop = target.parentElement;
   let title = mainShop.getElementsByClassName("manga-release")[0].innerText;
-  let actualPrice = mainShop.getElementsByClassName("actual-price").innerText;
+  let actualPrice =
+    mainShop.getElementsByClassName("actual-price")[0].innerText;
   let imageSrc = mainShop.getElementsByClassName("img-cover")[0].src;
   addItemToCart(title, actualPrice, imageSrc);
   updateCartTotal();
