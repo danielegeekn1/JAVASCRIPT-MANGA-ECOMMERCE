@@ -119,6 +119,8 @@
   position: relative;
   overflow-x: hidden;
   overflow-y: hidden;
+  background: url(/my-ecommerce/images/Download-wallpapers-Kenshin-Himura-protagonist-artwork-manga-Rurouni-Kenshin-besthqwallpaperscom.png)
+    no-repeat center center/cover;
   @include size(1100px, 100%);
   border: 3px solid green;
   padding: 20px 0;
@@ -170,7 +172,7 @@
     overflow-x: hidden;
     scroll-behavior: smooth;
     border: 3px solid violet;
-    @include size(900px, 100%);
+    @include size(850px, 100%);
     @include space(15px, 5px, 1.5rem);
 
     .manga-collection::-webkit-scrollbar {
@@ -179,7 +181,8 @@
     //code to style each manga container
     .manga-container {
       flex: 0 0 auto;
-      @include size(850px, 250px);
+      //@include size(850px, 250px);
+      @include size(850px, 150px);
       margin: 0;
 
       //manga image
@@ -198,6 +201,7 @@
           text-transform: capitalize;
         }
         .img-cover {
+          //@include size(350px, 100%);
           @include size(350px, 100%);
           object-fit: cover;
         }
@@ -206,7 +210,8 @@
       .manga-info {
         @include size(350px, 100%);
         padding-top: 10px;
-
+        color: rgb(0, 0, 0);
+        font-weight: 600;
         .manga-release {
           @include font(sans-serif, 200, bold);
         }
@@ -215,7 +220,6 @@
           line-height: 20px;
           overflow: hidden;
           opacity: 0.5;
-          text-transform: capitalize;
           margin: 5px 0;
         }
         .price {
@@ -267,4 +271,8 @@
       @include font(sans-serif, 35px, 400);
     }
   }
+}
+.products-second {
+  background: url(/my-ecommerce/images/demon-3.jpeg) no-repeat center
+    center/cover;
 }

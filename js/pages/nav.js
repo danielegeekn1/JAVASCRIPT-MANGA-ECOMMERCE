@@ -9,7 +9,7 @@ const createNav = () => {
     <!--input and button-->
     <div class="input-search-space">
       <input type="text" class="search-box" placeholder="search a manga" />
-      <button class="search-btn">search</button>
+      <button class="search-btn"">search</button>
     </div>
   </nav>
   

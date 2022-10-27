@@ -140,3 +140,86 @@ function purchaseClicked() {
   }
   updateCartTotal();
 }
+//code to activate the search bar in the navbar
+
+const Btn = document.querySelector(".search-btn");
+
+Btn.addEventListener("click", searchBox);
+function searchBox(e) {
+  e.preventDefault();
+  const input = document.querySelector(".search-box").value;
+  const mangaName = document.querySelectorAll(".manga-release");
+  for (let i = 0; i < mangaName.length; i++) {
+    let name = mangaName[i].textContent;
+    //console.log(name);
+    let demonSlayer = mangaName[0].textContent;
+    let dragonBall = mangaName[1].textContent;
+    let onePiece = mangaName[2].textContent;
+    let soulEater = mangaName[3].textContent;
+    let detectiveConan = mangaName[4].textContent;
+    let promisedNeverland = mangaName[5].textContent;
+    let shamanKing = mangaName[6].textContent;
+    let myHeroAcademy = mangaName[7].textContent;
+    let KomiCantCommunicate = mangaName[8].textContent;
+    let onePunchMan = mangaName[9].textContent;
+    let fairyTail = mangaName[10].textContent;
+    let frieren = mangaName[11].textContent;
+    let radiant = mangaName[12].textContent;
+    let gantz = mangaName[13].textContent;
+    let hanakoKun = mangaName[14].textContent;
+    let sengoku = mangaName[15].textContent;
+
+    //code to set the cases
+    //according to what the user is searching he'll be renderd to the section of the product he is looking for
+    switch (input) {
+      case demonSlayer:
+        window.location.href = "#demon-slayer";
+        break;
+      case dragonBall:
+        window.location.href = "#dragon-ball";
+        break;
+      case onePiece:
+        window.location.href = "#one-piece";
+        break;
+      case soulEater:
+        window.location.href = "#soul-eater";
+        break;
+      case detectiveConan:
+        window.location.href = "#detective-conan";
+        break;
+      case promisedNeverland:
+        window.location.href = "#promised-neverland";
+        break;
+      case shamanKing:
+        window.location.href = "#shaman-king";
+        break;
+      case myHeroAcademy:
+        window.location.href = "#my-hero-academy";
+        break;
+      case KomiCantCommunicate:
+        window.location.href = "#komi";
+        break;
+      case onePunchMan:
+        window.location.href = "#one-punch-man";
+        break;
+      case fairyTail:
+        window.location.href = "#fairy-tail";
+        break;
+      case frieren:
+        window.location.href = "#frieren";
+        break;
+      case radiant:
+        window.location.href = "#radiant";
+        break;
+      case gantz:
+        window.location.href = "#gantz";
+        break;
+      case hanakoKun:
+        window.location.href = "#hanako-kun";
+        break;
+      case sengoku:
+        window.location.href = "#sengoku";
+        break;
+    }
+  }
+}
