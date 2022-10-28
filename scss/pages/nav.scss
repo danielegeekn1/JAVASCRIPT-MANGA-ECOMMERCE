@@ -30,7 +30,6 @@
     .input-search-space {
       @include flex(flex, center, center);
       @include space(5px, 5px, 1rem);
-      border: 2px solid green;
       //style the input and the button
       //input style
       .search-box {
@@ -49,12 +48,11 @@
   }
   //dropdown menus style
   #main-drop-downs {
-    @include flex(flex, center, flex-end);
+    @include flex(flex, center, flex-start);
     @include space(5px, 5vw, 1.8rem);
     @include size(100px, 100%);
     padding: 10px 10vw;
     list-style: none;
-    border: 2px solid green;
     //style each dropdown menu
     ul {
       position: relative;
@@ -91,7 +89,6 @@
   @include size(600px, 100%);
   @include flex(flex, center, center);
   flex-flow: column;
-  border: 3px solid blue;
   z-index: 10;
   background: url(/my-ecommerce/images/demon-slayer-wp.jpeg) no-repeat center
     center/cover;
@@ -123,7 +120,6 @@
   background: url(/my-ecommerce/images/Download-wallpapers-Kenshin-Himura-protagonist-artwork-manga-Rurouni-Kenshin-besthqwallpaperscom.png)
     no-repeat center center/cover;
   @include size(1100px, 100%);
-  border: 3px solid green;
   padding: 20px 0;
   position: sticky;
   .product-category {
@@ -172,7 +168,6 @@
     @include flex(flex, space-around, center);
     overflow-x: hidden;
     scroll-behavior: smooth;
-    border: 3px solid violet;
     @include size(850px, 100%);
     @include space(15px, 5px, 1.5rem);
 
@@ -250,7 +245,6 @@
   @include size(600px, 100%);
   @include flex(flex, center, center);
   flex-flow: column;
-  border: 3px solid blue;
   z-index: 10;
   background: url(/my-ecommerce/images/made-in-abyss-wp.jpeg) no-repeat center
     center/cover;

@@ -34,7 +34,6 @@
   margin: 5px;
   padding: 5px;
   gap: 1rem;
-  border: 2px solid green;
 }
 .navbar nav .input-search-space .search-box {
   height: 35px;
@@ -52,7 +51,7 @@
 .navbar #main-drop-downs {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   margin: 5px;
   padding: 5vw;
   gap: 1.8rem;
@@ -60,7 +59,6 @@
   width: 100%;
   padding: 10px 10vw;
   list-style: none;
-  border: 2px solid green;
 }
 .navbar #main-drop-downs ul {
   position: relative;
@@ -97,7 +95,6 @@
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  border: 3px solid blue;
   z-index: 10;
   background: url(/my-ecommerce/images/demon-slayer-wp.jpeg) no-repeat center center/cover;
 }
@@ -132,7 +129,6 @@
   background: url(/my-ecommerce/images/Download-wallpapers-Kenshin-Himura-protagonist-artwork-manga-Rurouni-Kenshin-besthqwallpaperscom.png) no-repeat center center/cover;
   height: 1100px;
   width: 100%;
-  border: 3px solid green;
   padding: 20px 0;
   position: sticky;
 }
@@ -181,7 +177,6 @@
   align-items: center;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  border: 3px solid violet;
   height: 850px;
   width: 100%;
   margin: 15px;
@@ -263,7 +258,6 @@
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  border: 3px solid blue;
   z-index: 10;
   background: url(/my-ecommerce/images/made-in-abyss-wp.jpeg) no-repeat center center/cover;
 }
