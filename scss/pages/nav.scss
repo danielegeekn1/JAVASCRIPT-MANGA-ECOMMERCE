@@ -52,6 +52,7 @@
     @include flex(flex, center, flex-start);
     @include space(5px, 5vw, 1.8rem);
     @include size(100px, 100%);
+    //@include size(50px, 100%);
     padding: 10px 10vw;
     list-style: none;
     //style each dropdown menu
