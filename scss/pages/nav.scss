@@ -12,7 +12,8 @@
   //nav code to order the search box and the images
   @include flex(flex, space-between, center);
   flex-flow: column;
-
+  position: sticky;
+  background-color: lightblue;
   nav {
     //center the elements in the nav
     @include flex(flex, space-between, center);

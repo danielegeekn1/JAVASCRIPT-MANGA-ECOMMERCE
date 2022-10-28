@@ -8,6 +8,8 @@
   justify-content: space-between;
   align-items: center;
   flex-flow: column;
+  position: sticky;
+  background-color: lightblue;
 }
 .navbar nav {
   display: flex;
