@@ -3,7 +3,6 @@
 
 .navbar {
   //code to fix it in the top of the page
-  //position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -52,7 +51,6 @@
     @include flex(flex, center, flex-start);
     @include space(5px, 5vw, 1.8rem);
     @include size(100px, 100%);
-    //@include size(50px, 100%);
     padding: 10px 10vw;
     list-style: none;
     //style each dropdown menu
