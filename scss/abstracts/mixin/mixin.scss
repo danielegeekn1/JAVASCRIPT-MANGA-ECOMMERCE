@@ -18,3 +18,8 @@
   font-size: $font-size;
   font-weight: $font-weight;
 }
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}

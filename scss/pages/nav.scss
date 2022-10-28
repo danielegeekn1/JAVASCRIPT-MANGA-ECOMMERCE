@@ -171,16 +171,12 @@
     @include size(850px, 100%);
     @include space(15px, 5px, 1.5rem);
 
-    .manga-collection::-webkit-scrollbar {
-      display: none;
-    }
     //code to style each manga container
     .manga-container {
       flex: 0 0 auto;
       //@include size(850px, 250px);
       @include size(850px, 150px);
       margin: 0;
-
       //manga image
       .manga-image {
         position: relative;
@@ -197,7 +193,6 @@
           text-transform: capitalize;
         }
         .img-cover {
-          //@include size(350px, 100%);
           @include size(350px, 100%);
           object-fit: cover;
         }
